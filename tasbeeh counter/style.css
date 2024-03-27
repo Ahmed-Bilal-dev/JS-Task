@@ -1,0 +1,131 @@
+/* background of whole body */
+body {
+  background: url(./assets/img/GoOnlineTools-image-downloader.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+/* bismillah heading */
+.bismillah h3 {
+  color: rgb(29, 27, 27);
+  text-align: right;
+  font-size: 40px;
+  font-weight: 700;
+  margin-right: 250px;
+}
+
+
+/* subhanAllah,Alhamdulillah,Allahuakbar images settings */
+.main .img img, .main3 .img img {
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+}
+
+.main2 .img img {
+  width: 200px;
+  margin-left: 10px;
+  height: 150px;
+}
+
+
+/* counting button setting addition and reset buttons */
+.counter button {
+  padding: 20px;
+  background-color: #4CAF50;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: rgb(14, 13, 13);
+}
+
+.counter button {
+  font-size: xx-large;
+  margin-top: 50px;
+  margin-left: 23px;
+}
+
+.counter .btn2 {
+  font-size: xx-large;
+  padding: 19px 17px;
+}
+
+.counter button:hover {
+  background-color: #45a049;
+  color: aliceblue;
+}
+
+.counter .btn2 {
+  background-color: #008CBA;
+}
+
+.counter .btn2:hover {
+  background-color: #0077a7;
+}
+
+
+/* counting display settings */
+#display {
+  background-color: #fff;
+  padding: 10px 30px;
+  margin: 03px;
+  margin-bottom: 50px;
+  border-radius: 05px;
+  font-size: xx-large;
+  border: 1px solid;
+  margin-left: 60px;
+}
+
+
+#display2 {
+  background-color: #fff;
+  padding: 10px 30px;
+  margin: 03px;
+  margin-bottom: 50px;
+  border-radius: 05px;
+  font-size: xx-large;
+  border: 1px solid;
+  margin-left: 60px;
+}
+
+#display3 {
+  background-color: #fff;
+  padding: 10px 30px;
+  margin: 03px;
+  margin-bottom: 50px;
+  border-radius: 05px;
+  font-size: xx-large;
+  border: 1px solid;
+  margin-left: 60px;
+}
+
+
+/* whole cards setting */
+.main, .main2, .main3 {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #e2d9d9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  width: 200px;
+  height: 350px;
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
+  margin-right: 20px;
+}
+
+
+.main {
+  margin-left: 550px; 
+}
+
+.main2 {
+  margin-right: 20px; 
+}
+
+
+
