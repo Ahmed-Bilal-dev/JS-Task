@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad App - Admin Dashboard</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="admin-dashboard">
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- User data will be populated here -->
+                </tbody>
+            </table>
+            <button class="btn btn-danger" onclick="logout()">Logout</button>
+        </div>
+    </section>
+    <script src="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script>
+        // Ensure the admin user is created only once
+        document.addEventListener('DOMContentLoaded', function() {
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if the admin user already exists
+            let adminExists = users.some(user => user.email === 'admin@example.com');
+            
+            if (!adminExists) {
+                // Define an admin user
+                let adminUser = {
+                    name: "Admin",
+                    email: "admin@example.com",
+                    password: "admin123", // In a real application, passwords should be hashed
+                    role: "admin"
+                };
+
+                // Add the admin user to the users array
+                users.push(adminUser);
+
+                // Save the updated users array to localStorage
+                localStorage.setItem('users', JSON.stringify(users));
+
+                console.log('Admin user added:', adminUser);
+            }
+        });
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            localStorage.removeItem('currentUser');
+            window.location.href = 'login.html';
+        }
+
+        // Fetch and display user data in the admin dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            let userTableBody = document.getElementById('userTableBody');
+
+            users.forEach(user => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.role}</td>
+                `;
+                userTableBody.appendChild(row);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

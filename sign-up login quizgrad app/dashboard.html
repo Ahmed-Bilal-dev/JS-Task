@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .dropdown-menu a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+        }
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 bg-light">
+        <h1>Welcome, <span id="username"></span>!</h1>
+        <div class="position-relative">
+            <img src="" id="profilePic" class="profile-pic" alt="Profile Picture">
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#" id="logout">Logout</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let loggedIn = localStorage.getItem('loggedIn');
+            if (!loggedIn) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                document.getElementById('username').textContent = currentUser.name;
+                document.getElementById('profilePic').src = currentUser.profilePic || './img/default-profile.png';
+            }
+
+            document.getElementById('profilePic').addEventListener('click', function() {
+                let dropdownMenu = document.getElementById('dropdownMenu');
+                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            document.getElementById('logout').addEventListener('click', function() {
+                localStorage.removeItem('loggedIn');
+                localStorage.removeItem('currentUser');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+    <script src="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+
+  .navbarli ul li a{
+      margin-top: 20px;
+      cursor: pointer;
+      color: gray;
+      margin-left: 10px;
+  }
+
+  
+  .navbarli ul li button{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.homecontent h1 {
+    font-size: 60px;
+    width: 500px;
+    margin-top: 60px;
+}
+
+.homecontent h6 {
+    color: gray;
+}
+.homecontent h6 .line {
+    color: black;
+    font-size: x-large;
+}
+
+.homecontent button{
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: larger;
+    margin-right: 20px;
+    color: white;
+}
+
+.homecontent .groupimg img {
+ width: 350px;
+ height: 350px;
+}
+
+/* .homecontent .knowimg{
+    width: 120px;
+} */
+
+.homecontent .knowMore{
+    font-size: x-large;
+    color: yellow;
+    cursor: pointer;
+    display: inline;
+}
+
+.homecontent .buttons .knowMore .arrow {
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.groupimg {
+    width: 350px;
+    height: 350px;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+/* login page......................................................... */
+
+.main-content img {
+    margin-top: 40px;
+    width: 400px;
+}
+
+.main-content input {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px; /* Slightly increased border radius for a softer look */
+    border: 1px solid #ccc; /* Light gray border */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color for better readability */
+    font-size: 16px; /* Larger font size for better readability */
+    width: 100%; /* Full width of the parent container */
+    max-width: 500px; /* Limit the maximum width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+}
+
+.main-content input:focus {
+    border-color: #007bff; /* Blue border color on focus */
+    background-color: #fff; /* White background on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* More pronounced shadow on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+
+.main-content button {
+    margin-top: 30px;
+    padding: 10px 40px;
+    border-radius: 0px;
+}
+
+.main-content p {
+    margin-top: 20px;
+}
+
+.graduate-cap img {
+    width: 500px;
+    height: 600px;
+}
+
+
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+
